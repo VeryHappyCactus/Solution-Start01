@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace WebUi.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin,user")]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
