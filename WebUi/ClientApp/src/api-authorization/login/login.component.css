@@ -1,0 +1,9 @@
+.sidebar-menu li a.active {
+  color: #FFFFFF;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #830000, #f60000);
+  -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+}

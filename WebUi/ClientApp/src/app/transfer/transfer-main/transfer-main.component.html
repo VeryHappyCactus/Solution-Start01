@@ -11,8 +11,14 @@
         <!--Left Sidebar Navigation-->
         <ul class="sidebar-menu">
           <li class="menu-header">Navigation</li>
-          <li class="dropdown active">
-            <a routerLink="/" routerLinkActive="active" class="nav-link"><i data-feather="monitor"></i><span>Transfer Sheet</span></a>
+          <li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/"  class="nav-link"><i data-feather="monitor"></i><span>Transfer Sheet</span></a>
+          </li>
+          <li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/transferMenu1"  class="nav-link"><i data-feather="monitor"></i><span>Transfer Menu 1</span></a>
+          </li>
+          <li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/transferMenu2"  class="nav-link"><i data-feather="monitor"></i><span>Transfer Menu 2</span></a>
           </li>
         </ul>
       </aside>
