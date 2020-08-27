@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700;800;900&display=swap");
+
+.main-sidebar{
+	background-color:#FFFFFF;
+}
+.main-sidebar .sidebar-brand{
+	height:90px;
+	line-height:80px;
+}
+.main-sidebar .sidebar-brand a .header-logo {
+    height:40px
+}
+
+
+.main-sidebar .sidebar-menu li a{
+	color:#60686f;
+}
+.light-sidebar .main-sidebar .sidebar-menu li.active a{
+	color:#454546;
+	background-color:rgba(0, 0, 0, 0.14);
+}
+
+.Driver_Promoter_ROW{}
+.Driver_Promoter_ROW .Top_card_Count{
+	font-size:48px;
+}
+
+/* Royal BLUE THEME  */
+.main-sidebar{
+	background-color:#000562;
+}
+.main-sidebar .sidebar-menu li a{
+	color:#FFFFFF;
+}
+.main-sidebar .sidebar-menu li a:hover{
+	color:#FFFFFF;
+	background-color:transparent;
+	background-image: linear-gradient(to right, #830000, #f60000);
+	    -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+}
+
+.main-sidebar .sidebar-menu li.active a {
+  color: #FFFFFF;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #830000, #f60000);
+  -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+}
+
+.light-sidebar .main-sidebar .sidebar-menu li.active a{
+	color:#FFFFFF;
+	background-color:transparent;
+	background-image: linear-gradient(to right, #830000, #f60000);
+}
+.theme-white .navbar{
+	background-color:#dedfe0;
+}
+.card .card-header h4{
+	text-transform:uppercase;
+	font-size:24px;
+	font-weight:900;
+	color:rgb(255, 5, 40);
+}
+
+
+.UserProfile_PhotoBlock{
+	margin-bottom:20px;
+	width:200px;
+	position:relative;
+	margin:0 auto;
+	margin-bottom:10px;
+}
+.author-box .UserProfile_PhotoBlock .User-box-picture{
+    width:200px;
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,0.1);
+	border-radius:50% !important;
+}
+.PersonalInformation_Block{
+	box-shadow: 0 0 30px rgba(0,0,0,.15);
+}
+.PersonalInformation_Block .card-body p{
+	margin-bottom:10px;
+}
+.PersonalInformation_Block .card-body .Persona_FromInfo p, .GlobalSection_Block p{
+	margin-bottom:0;
+}
+.AboutMe_Form{
+	margin-top:30px;
+}
+.form-group .control-label, .form-group>label{
+	font-size:14px;
+	font-weight:700;
+}
+.FileUPload_Photo_Block{
+	margin-right: 5px;
+    font-size: 12px;
+}
+.FileUPload_Photo_Block{
+	margin-right: 5px;
+    font-size: 12px;
+}
+.UserPhoto_UploadBtn{
+	padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    background: #acaeb0;
+    border-radius:50%;
+    display: flex;
+    font-weight: 500;
+    transition: box-shadow .1s ease-in,background-color .1s ease-in;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	color:#FFFFFF;
+}
+.UserPhoto_UploadBtn:hover{
+	cursor:pointer;
+	background: #050e7c;
+}
+
+
+/* CONTACT LIST */
+.Global_TableData{}
+.manageContact_List{}
+.Global_TableData.manageContact_List div.table-responsive>div.dataTables_wrapper>div.row:first-child{
+	display:none;
+}
+.Datatable_Button{}
+.Datatable_Button a{
+	display:block;
+}
+.Global_TableData.manageContact_List span.userInfo{
+	display:block;
+}
+.Global_TableData.manageContact_List a.Conversation_Col span.userInfo{
+	text-align:left;
+	padding:5px 15px;
+	margin:4px 0;
+	display:block;	
+}
+
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a, .light-sidebar .main-sidebar .sidebar-menu li ul.dropdown-menu li a:hover{
+	color:#FFFFFF;
+}
+.Mobile_DisplayOnly{
+	display:none;
+}
+@media (max-width:1024px){
+.Mobile_DisplayOnly{
+	display:block;
+}
+}
+
+.TimeExit_FormBlock{
+	font-family: 'Roboto Slab', serif;
+}
+.TimeExit_FormBlock .form-group label{
+	font-family: 'Roboto Slab', serif;
+	font-size: 13px;
+	letter-spacing: normal;
+	text-transform: uppercase;
+	color: #000562;
+}
+.custom-control-label{}
+.TimeExit_FormBlock .question_LineBlock .Question_Checkbox label.custom-control-label{
+	font-family: 'Roboto Slab', serif;
+	font-size: 12px;
+	letter-spacing: normal;
+	text-transform: uppercase;
+}
+
+h3.questionBlock_Title{
+	font-family: 'Roboto Slab', serif;
+	color: #ed1c24;
+	margin-bottom: 25px;
+
+	font-size: 16px;
+	color:#FFFFFF;
+	background:#000562;
+	border-radius: 2px;
+	padding: 7px 15px;
+}
+.question_LineBlock{
+	display: block;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+.question_LineBlock h4{
+	font-weight: 700;
+	font-size: 14px;
+	font-family: 'Roboto Slab', serif;
+	color: #000000;
+}
+.question_LineBlock .Question_Checkbox{
+}
+.question_LineBlock .Question_Checkbox .custom-control{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.PersonaInformation_block{
+	background:#dadbf8;
+	padding: 20px 20px 10px;
+	margin-bottom: 20px;
+}
+.PersonalInformation_row .form-group{
+	margin-bottom: 15px;
+}
+.DateRefTop_row{
+	background:#f9d5d6;
+	padding: 20px 20px 10px;
+	margin-bottom: 20px;
+}
+.Note_DetailsBlock textarea.form-control{
+	height: 100px !important;
+}
+
+.TransferCompany_Info_row{
+	margin-top: 30px;
+}
+.TransferCompany_Info_row h5{
+	font-size: 16px;
+	color:#FFFFFF;
+	background:#000562;
+	border-radius: 2px;
+	padding: 7px 15px;
+}
+.deedHolder_row, .Maintenannce_FeeRow{
+	align-items: center;
+}
+.deedHolder_row .form-group, .Maintenannce_FeeRow .form-group{
+	margin-bottom: 0;
+}
+.PersonalInformation_Block .input-group-text, .PersonalInformation_Block select.form-control:not([size]):not([multiple]), .PersonalInformation_Block .form-control:not(.form-control-sm):not(.form-control-lg) {
+    font-size: 12px;
+}
+.Maintenannce_FeeRow span.LabelNotice_Text{
+	padding-left:10px;
+	font-size: 13px;
+}
+
+@media (max-width:992px){
+	.OtherDeed_HolderInput {
+		padding-left: 0;
+	}
+}

@@ -1,0 +1,273 @@
+<section class="section">
+  <div class="section-body">
+    <form [formGroup]="transferSheetForm" >
+      <div class="row mt-sm-4">
+
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="card PersonalInformation_Block">
+            <div class="card-header">
+              <h4>Transfer Sheet</h4>
+            </div>
+
+            <div class="card-body">
+
+              <div class="TimeExit_FormBlock">
+                <div class="PersonalInformation_row">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="DateRefTop_row">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Date:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()"/>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Rep:</label>
+                              <input type="text" class="form-control bg-secondary" id="inpuDatePanel" value="{{user.name}}" disabled>
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">List:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="PersonaInformation_block">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Client First name:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Client Last name:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Spouse First name:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <label for="inpuDatePanel">Phone Number:</label>
+                              <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="Note_DetailsBlock">
+                        <div class="form-group">
+                          <label for="inputMessage">Notes:</label>
+                          <textarea class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <h3 class="questionBlock_Title">QUALIFIYING QUESTIONS:</h3>
+                      <div class="question_LineBlock">
+                        <h4>ARE YOU THE DEEDED OWNER OF TIMESHARE?</h4>
+                        <div class="Question_Checkbox">
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all1" name="isDeedOwnerTimeShare" value="true" formControlName="isDeedOwnerTimeShare">
+                            <label for="checkbox-all1" class="custom-control-label">&nbsp; Yes</label>
+                          </div>
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all2" name="isDeedOwnerTimeShare" value="false" formControlName="isDeedOwnerTimeShare">
+                            <label for="checkbox-all2" class="custom-control-label">&nbsp; No</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="question_LineBlock">
+                        <h4>ARE YOU THE ONLY ONE ON THE DEED? </h4>
+                        <div class="Question_Checkbox">
+                          <div class="row deedHolder_row">
+                            <div class="col-lg-12 col-xl-12">
+                              <div class="custom-checkbox custom-checkbox-table custom-control">
+                                <input type="radio" class="custom-control-input" id="checkbox-all3" name="isOnlyOneDeed" value="true" formControlName="isOnlyOneDeed">
+                                <label for="checkbox-all3" class="custom-control-label">&nbsp; Yes</label>
+                              </div>
+                              <div class="custom-checkbox custom-checkbox-table custom-control">
+                                <input type="radio" class="custom-control-input" id="checkbox-all4" name="isOnlyOneDeed" value="false" formControlName="isOnlyOneDeed">
+                                <label for="checkbox-all4" class="custom-control-label">&nbsp; No</label>
+                              </div>
+                              <div class="custom-checkbox custom-checkbox-table custom-control OtherDeed_HolderInput" *ngIf="isOnlyOneDeed.value === 'true'">
+                                <input type="checkbox" class="custom-control-input" id="checkbox-all5">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="inpuDatePanel" placeholder="OTHER DEED HOLDERS">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question_LineBlock">
+                        <h4>WHAT DEVELOPERS DO YOU CURRENTLY OWN WITH? </h4>
+                        <div class="form-group">
+                          <a href="#collapseDeveloper" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseDeveloper" >Edit</a>
+                        </div>
+                        <div class="form-group collapse" id="collapseDeveloper">
+                          <app-edit [keyValues]="developers"></app-edit>
+                        </div>
+                        <div class="Question_Checkbox">
+                          <div class="form-group">
+                            <select class="custom-select">
+                              <option *ngFor="let developer of developers" value="">{{developer.value}}</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question_LineBlock">
+                        <div class="row">
+                          <div class="col-xl-6">
+                            <h4>DO YOU STILL MAKE MORGATE PAYMENTS? </h4>
+                            <div class="Question_Checkbox">
+                              <div class="custom-checkbox custom-checkbox-table custom-control">
+                                <input type="radio" class="custom-control-input" id="checkbox-all7" name="isMakeMorgatePayment" value="true" formControlName="isMakeMorgatePayment">
+                                <label for="checkbox-all7" class="custom-control-label">&nbsp; Yes</label>
+                              </div>
+                              <div class="custom-checkbox custom-checkbox-table custom-control">
+                                <input type="radio" class="custom-control-input" id="checkbox-all8" name="isMakeMorgatePayment" value="false" formControlName="isMakeMorgatePayment">
+                                <label for="checkbox-all8" class="custom-control-label">&nbsp; No</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-xl-6">
+                            <h4>WHAT IS YOUR CURRENT BALANCE?</h4>
+                            <div class="Question_Checkbox">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="question_LineBlock">
+                        <h4>WHAT IS YOUR CURRENT MAINTENANCE FEE?</h4>
+                        <div class="Question_Checkbox">
+                          <div class="row no-gutters Maintenannce_FeeRow">
+                            <div class="col-4">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="inpuDatePanel" placeholder="">
+                              </div>
+                            </div>
+                            <div class="col-8 form-group">
+                              <select class="custom-select">
+                                <option value="YEARLY">YEARLY</option>
+                                <option value="MONTHLY">MONTHLY</option>
+                              </select>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="question_LineBlock">
+                        <h4>ARE YOU CURRENT WITH YOUR PAYMENTS?</h4>
+                        <div class="Question_Checkbox">
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all13" name="isCurrentPayments" value="true" formControlName="isCurrentPayments">
+                            <label for="checkbox-all13" class="custom-control-label">&nbsp; Yes</label>
+                          </div>
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all14" name="isCurrentPayments" value="false" formControlName="isCurrentPayments">
+                            <label for="checkbox-all14" class="custom-control-label">&nbsp; No</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="question_LineBlock">
+                        <h4>IF WE’RE ABLE TO ACCEPT YOUR CASE, ARE YOU FINANCIALLY CAPABLE OF BRINGING ALL PAST DUE PAYMENTS CURRENT?</h4>
+                        <div class="Question_Checkbox">
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all11" name="isAcceptCase" value="true" formControlName="isAcceptCase">
+                            <label for="checkbox-all11" class="custom-control-label">&nbsp; Yes</label>
+                          </div>
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="radio" class="custom-control-input" id="checkbox-all12" name="isAcceptCase" value="false" formControlName="isAcceptCase">
+                            <label for="checkbox-all12" class="custom-control-label">&nbsp; No</label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="TransferCompany_Info_row">
+                  <h5>TRANSFER COMPANY INFORMATION:</h5>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="inpuDatePanel">COMPANY NAME</label>
+                          <div class="form-group">
+                            <a href="#collapseCompany" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCompany">Edit</a>
+                          </div>
+                          <div class="form-group collapse" id="collapseCompany">
+                            <app-edit [keyValues]="companies"></app-edit>
+                          </div>
+                          <div class="Question_Checkbox">
+                            <div class="form-group">
+                              <select class="custom-select">
+                                <option *ngFor="let company of companies" value="">{{company.value}}</option>
+                              </select>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="inpuDatePanel">ACCEPTING AGENT</label>
+                        <div class="form-group">
+                          <a href="#collapseAgent" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseAgent">Edit</a>
+                        </div>
+                        <div class="form-group collapse" id="collapseAgent">
+                          <app-edit [keyValues]="agents"></app-edit>
+                        </div>
+                        <div class="Question_Checkbox">
+                          <div class="form-group">
+                            <select class="custom-select">
+                              <option *ngFor="let agent of agents"value="">{{agent.value}}</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="inpuDatePanel">TRANSFER TIME</label>
+                        <input type="datetime" class="form-control bg-secondary" id="inpuDatePanel" value="{{transferDate | date: 'short'}}" disabled="disabled" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="buttons">
+                <button class="btn btn-primary">Send</button>
+                <button class="btn btn-info">Reset</button>
+                <button class="btn btn-danger">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</section>

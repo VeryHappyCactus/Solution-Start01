@@ -1,0 +1,36 @@
+<div id="app">
+  <div class="main-wrapper main-wrapper-1">
+    <div class="navbar-bg d-none d-xl-block"></div>
+
+    <div class="main-sidebar sidebar-style-2 d-none d-xl-block ">
+      <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+          <a href="index.html"><img alt="image" src="../../../assets/img/main_logo.png" class="header-logo" /></a>
+        </div>
+
+        <!--Left Sidebar Navigation-->
+        <ul class="sidebar-menu">
+          <li class="menu-header">Navigation</li>
+          <li class="dropdown active">
+            <a routerLink="/" routerLinkActive="active" class="nav-link"><i data-feather="monitor"></i><span>Transfer Sheet</span></a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <router-outlet></router-outlet>
+
+    </div>
+    <footer class="main-footer">
+      <div class="footer-left">
+        Copyright &copy; 2020 <div class="bullet"></div> Powered By <a href="#">Server Pipe</a>
+      </div>
+      <div class="footer-right">
+      </div>
+    </footer>
+  </div>
+</div>

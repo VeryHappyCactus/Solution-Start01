@@ -41,7 +41,8 @@ let applicationPaths: ApplicationPathsType = {
   LoggedOutPathComponents: [],
   LogOutCallbackPathComponents: [],
   IdentityRegisterPath: '/Identity/Account/Register',
-  IdentityManagePath: '/Identity/Account/Manage'
+  IdentityManagePath: '/Identity/Account/Manage',
+  LoginForm: "login",
 };
 
 applicationPaths = {
@@ -76,6 +77,7 @@ interface ApplicationPathsType {
   readonly LogOutCallbackPathComponents: string [];
   readonly IdentityRegisterPath: string;
   readonly IdentityManagePath: string;
+  readonly LoginForm: string;
 }
 
 export const ApplicationPaths: ApplicationPathsType = applicationPaths;

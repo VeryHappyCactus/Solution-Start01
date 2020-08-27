@@ -74,6 +74,14 @@ namespace WebUi
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+
+            //services.AddMvc()
+            //.AddRazorPagesOptions(options =>
+            //{
+            //    options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
+            //});
+
         }
 
         private void ConfigureDi(IServiceCollection services)
@@ -142,11 +150,12 @@ namespace WebUi
                 endpoints.MapHub<TalkActive>("/hubs");
             });
 
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                    pattern: "{controller}/{action}/{id?}");
                 endpoints.MapRazorPages();
             });
 

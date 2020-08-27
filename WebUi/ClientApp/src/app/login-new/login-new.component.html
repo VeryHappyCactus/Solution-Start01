@@ -1,0 +1,61 @@
+<div class="main_container h-100">
+  <div class="login_page_container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="login_area">
+
+        <!--start user panel block-->
+        <div class="user_panel_block">
+          <!--site title-->
+          <div class="login_title"><img src="assets/img/main_logo2.png" alt="Atlas Lead Services" title="Atlas Lead Services" class="img-responsive" /></div>
+
+          <div class="secure_login_title">
+            <img src="assets/img/secure_login_title1.png" alt="SecureLogin" title="Secure Login" />
+          </div>
+
+          <!--user login block-->
+          <div class="login_block">
+            <div class="login_inputbox_line" style="position:relative;">
+              <input id="name" formControlName="name" type="text" class="form-control custom_inputbox" title="Username" style="background-color: wheat;" required />
+              <span *ngIf="name.invalid && (name.dirty || name.touched)" style="position:absolute; right: 10px; top:4px; font-size: 1.3rem; font-weight:bold; color:red;">
+                x
+              </span>
+            </div>
+
+            <div class="login_inputbox_line" style="position:relative">
+              <input id="password" formControlName="password" type="password" class="form-control custom_inputbox" title="Password" style="background-color: wheat;" required />
+              <span *ngIf="password.invalid && (password.dirty || password.touched)" style="position:absolute; right: 10px; top:4px; font-size: 1.3rem; font-weight:bold; color:red;">
+                x
+              </span>
+            </div>
+
+            <button class="btn login_btn_color" type="submit">Login</button>
+            <div class="forgot_password"><a href="javascript:void(0);"><i class="fa fa-lock"></i>Forgot Password</a></div>
+          </div>
+          <!--end user login block-->
+        </div>
+        <!--end user panel block-->
+
+        <div *ngIf="isLoginInvalid" class="error_message">
+          <p>Username or Password incorrect</p>
+        </div>
+        <div class="clearfix"></div>
+
+      </div>
+    </form>
+  </div>
+
+
+  <!--start footer block-->
+  <div class="footer_block">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="copyright_info">Copyright &copy; 2020, Timeshare Exit, All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end footer block-->
+</div>
+
+<div class="body_bgOverlay"></div>
