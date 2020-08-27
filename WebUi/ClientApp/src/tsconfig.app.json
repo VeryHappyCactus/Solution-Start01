@@ -6,6 +6,10 @@
   },
   "exclude": [
     "src/test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "./app/counter/*",
+    "./app/home/*",
+    "./app/fetch-data/*",
+    "./app/nav-menu/*"
   ]
 }
