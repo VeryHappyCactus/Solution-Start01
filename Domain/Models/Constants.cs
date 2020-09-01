@@ -6,7 +6,7 @@
         public const string DefaultConnection = "Server=DESKTOP-0HPQBAC;Database=Start01Bd;Trusted_Connection=True;MultipleActiveResultSets=true";
 #else
         public const string DefaultConnection =
-            "Server=SP-VL;Database=Start01Bd;Persist Security Info=True;User ID=xxxx;Password=xxxxxx";
+            "Server=DESKTOP-0HPQBAC;Database=Start01Bd;Trusted_Connection=True;MultipleActiveResultSets=true";
 #endif
     }
 }
