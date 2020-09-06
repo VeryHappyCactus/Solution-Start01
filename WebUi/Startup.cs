@@ -24,6 +24,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebUi.Hubs;
 using WebUi.Infrastructure;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WebUi
 {
@@ -55,8 +56,14 @@ namespace WebUi
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddAuthentication()
-                .AddCookie("Cookies")
                 .AddIdentityServerJwt();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options => //CookieAuthenticationOptions
+            {
+                options.LoginPath = "/login";
+            });
+
 
             services.AddSignalR();
             //services.AddHangfire(x => x.UseMemoryStorage());
